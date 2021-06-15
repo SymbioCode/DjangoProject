@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="container">
+        <div>
+            <h1><p style="color: red">Welcome to all pizzas which you want</p></h1>
+            <hr>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Назва</th>
+                    <th scope="col">Ціна</th>
+                    <th scope="col">Опис</th>
+                    <th scope="col">Розмір</th>
+                    <th scope="col">Піцерія</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for pizza in pizzas_list %}
+                    <tr>
+                        <th scope="row">{{ pizza.id }} </th>
+                        <td>{{ pizza.name }} </td>
+                        <td>{{ pizza.price }} </td>
+                        <td>{{ pizza.description }} </td>
+                        <td>{{ pizza.size }} </td>
+                        <td>{{ pizza.pizzashop }} </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+</body>
+</html>
